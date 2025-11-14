@@ -26,7 +26,7 @@ int euicc_hexutil_bin2hex(char *restrict output, const uint32_t output_len, cons
     if (output == NULL || bin == NULL || output_len < ((2 * bin_len) + 1)) {
         return -1;
     }
-    static const char digits[] = "0123456789abcdef";
+    static const char digits[] = "0123456789ABCDEF";
     uint32_t n = 0;
     for (uint32_t i = 0; i < bin_len; i++) {
         output[n++] = digits[bin[i] >> 4];
